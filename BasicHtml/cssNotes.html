@@ -1,0 +1,66 @@
+<!-- Changing the color of text-->
+<h2 style="color: red;">CatPhotoApp</h2>
+<!-- you can define the css at the top of a HTML page or in a specete file, this considers all h2 elements -->
+<style>
+  h2 {
+    color: red;
+  }
+</style>
+<h2>CatPhotoApp</h2>
+<!-- create classes, so you can give an element a class to change the css. Do that with the dot notation
+This way we dont screw up all H2 elements-->
+<style>
+  .red-text {
+    color: red;
+  }
+</style>
+<h2 class="red-text">CatPhotoApp</h2>
+
+<!-- changing font size with px. You can change a whole class p with a font size-->
+<style>
+  .red-text {
+    color: red;
+  }
+  p {
+    font-size: 16px;
+  }
+</style>
+<!-- changing font-family -->
+<style>
+  .red-text {
+    color: red;
+    font-family: sans-serif;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+</style>
+
+
+<!--
+Importing a google font. Google Font is a free library
+We can import these fonts by adding this in
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+font-family: FAMILY_NAME, GENERIC_NAME; (generic is optional and is a fallback fonts in case the familyname is not avaliable)
+LOBSTER Font is pretty cool
+  -->
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<style>
+  .red-text {
+    color: red;
+    font-family: lobster;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+OR <h2 class="red-text" style="font-family: Lobster">CatPhotoApp</h2>
