@@ -63,4 +63,243 @@ LOBSTER Font is pretty cool
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
-OR <h2 class="red-text" style="font-family: Lobster">CatPhotoApp</h2>
+<h2 class="red-text" style="font-family: Lobster">CatPhotoApp</h2>
+
+<!--
+Several fonts avaliable, however, must common is
+  monospace, serif, sans-serif, which are all avaliable on all browsers
+  when one is not avaliable you can use a generic font to fall back to.
+  -->
+  <style media="screen">
+    p {
+    font-family: Helvetica, sans-serif;
+    }
+  </style>
+  <!-- Helvetica is the main one, but if not avalible it will be sans-serif -->
+
+  <!-- use width to control an elements witdh, often img -->
+  <style>
+  .larger-image {
+    width: 500px;
+  }
+  .smaller-image {
+    width: 100px;
+  }
+</style>
+
+<!-- borders are borders, which has style / color / width
+Styles such as solid,
+  -->
+  <style>
+  .thin-red-border {
+    border-color: red;
+    border-width: 5px;
+    border-style: solid;
+  }
+</style>
+
+<!-- You can apply multipble classes to one element by doing it like this classes="class1 class2 class3"
+  simply seperated by a space -->
+  <style>
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+  }
+  .smaller-image{
+    width 100px;
+  }
+</style>
+  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <!-- Changing border corners to be round with border-radius, and you can also use percentage instead of pixels
+        50% being perfect circle-->
+        <style media="screen">
+          .perfect-circle-border{
+            border-radius: 50%;
+          }
+          .thick-green-border {
+          border-color: green;
+          border-width: 10px;
+          border-style: solid;
+          border-radius: 10px;
+        }
+        </style>
+
+<!-- changing background color with background-color -->
+.green-background {
+  background-color: green;
+}
+.silver-background {
+   background-color: silver;
+ }
+ <!-- why use ID? You can use ID to style a single element, and they can be altered with JS
+You can also style ID with CSS , also id has higher importance than class, so it will be priotized
+using # in the style will make it know it is ID-->
+#cat-photo-element {
+  background-color: green;
+}
+
+<!-- PADDING ()
+Margin, padding, border are important concepts
+Padding controls the amount of space between the elements content and its border
+When you increase the blue box's padding, it will increase the distance (padding) between the text and the border around it.
+It basicly makes it larger in some sense. So the element in the middle will have more distance to the border with a larger padding
+
+MARGIN)
+An element's margin controls the amount of space between an element's border and surrounding elements.
+
+Margin is an element’s personal space — how much distance the element wants to keep with other elements around it.
+Padding is how much an element is away from itself — how much distance an element wants to keep with the elements inside it.
+
+Margin can also be negative (-15px)
+-->
+<style>
+  .injected-text {
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .box {
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    text-align: center;
+  }
+
+  .yellow-box {
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  .red-box {
+    background-color: crimson;
+    color: #fff;
+    padding: 20px;
+  }
+
+  .blue-box {
+    background-color: blue;
+    color: #fff;
+    padding: 10px;
+  }
+</style>
+<h5 class="injected-text">margin</h5>
+
+<div class="box yellow-box">
+  <h5 class="box red-box">padding</h5>
+  <h5 class="box blue-box">padding</h5>
+</div>
+
+<!-- You can also specifiy where the padding and margin should take place
+  TOP / BOTTOM  / RIGHT / LEFT -->
+  <style media="screen">
+    .red-box {
+      background-color: crimson;
+      color: #fff;
+      padding-top: 40px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+    }
+    .blue-box {
+      background-color: blue;
+      color: #fff;
+      margin-top: 40px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+  </style>
+
+<!-- It can also be specified much simpler, like this
+  padding: 10px 20px 10px 20px;
+  padding: TOPpx RIGHTpx BOTTOMpx  LEFTpx;
+  margin: 10px 20px 10px 20px;
+-->
+
+
+<!-- We have seen these selection ID -> # class -> . now value -> []
+This is the atrribute value selecter [attr=value] so we can alter everyhing that has type="radio"
+  -->
+  <style>
+    [type='radio'] {
+      margin: 20px 0px 20px 0px;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+  .red-text {
+    color: red;
+  }
+
+  h2 {
+    font-family: Lobster, monospace;
+  }
+
+  p {
+    font-size: 16px;
+    font-family: monospace;
+  }
+
+  .thick-green-border {
+    border-color: green;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 50%;
+  }
+
+  .smaller-image {
+    width: 100px;
+  }
+
+  .silver-background {
+    background-color: silver;
+  }
+  [type='radio']{
+    margin: 10px 0px 15px 0px;
+  }
+</style>
+
+<h2 class="red-text">CatPhotoApp</h2>
+<main>
+  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+
+  <div class="silver-background">
+    <p>Things cats love:</p>
+    <ul>
+      <li>cat nip</li>
+      <li>laser pointers</li>
+      <li>lasagna</li>
+    </ul>
+    <p>Top 3 things cats hate:</p>
+    <ol>
+      <li>flea treatment</li>
+      <li>thunder</li>
+      <li>other cats</li>
+    </ol>
+  </div>
+
+  <form action="https://freecatphotoapp.com/submit-cat-photo" id="cat-photo-form">
+    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <label><input type="checkbox" name="personality" checked> Loving</label>
+    <label><input type="checkbox" name="personality"> Lazy</label>
+    <label><input type="checkbox" name="personality"> Energetic</label><br>
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+  </form>
+</main>
+
+<!-- Understand Absolute versus Relative Units
+    RELATIVE UNITS
+    There is even more lenght units px, in, mm (inches, milimeter)
+    Absolute length units approximate the actual measurement on a screen but there are some differences depending on a screen's resolution.
+
+    ABSOLUTE UNITS
+      Relative units, such as em or rem, are relative to another length value. For example, em is based on the size of an element's font.
+      If you use it to set the font-size property itself, it's relative to the parent's font-size.
+  -->
